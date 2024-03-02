@@ -23,4 +23,4 @@ class Todos(Base):
     description = Column(String,nullable=False)
     priority = Column(Integer, nullable=False)
     complete = Column(Boolean, default=False)
-    owner = Column(Integer, ForeignKey('users.id'))
+    owner_id = Column(Integer, ForeignKey('users.id'))

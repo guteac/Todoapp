@@ -24,6 +24,7 @@ class SendUser(BaseModel):
     password: str = Field(min_length=5, max_length=30)
     is_active: bool
     role: str = Field(min_length=3, max_length=10)
+    phone_number: str = Field(min_length=6, max_length=15)
 
     class Config():
         json_schema_extra = {
@@ -34,7 +35,8 @@ class SendUser(BaseModel):
                 'last_name': 'Doe',
                 'password': 'password123',
                 'is_active': True,
-                'role': 'admin'
+                'role': 'admin',
+                'phone_number': '(111)-111-1111'
             }
         }
 
